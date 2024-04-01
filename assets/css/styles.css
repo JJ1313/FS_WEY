@@ -41,7 +41,7 @@ h6 {
     }
 
     &.h2 {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
 }
@@ -59,10 +59,12 @@ h6 {
   padding: 1rem;
 
   >* {
+    --size: 100px;
+
     text-align: center;
-    border: 1px solid black;
-    line-height: 100px;
-    width: 100px;
-    height: 100px;
+    outline: 1px solid black;
+    line-height: var(--size);
+    width: var(--size);
+    height: var(--size);
   }
 }
