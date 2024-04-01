@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+.flow>*+* {
+  margin-top: 1em;
+
+}
+
+.section {
+  border: 1px solid black;
+  padding: 1rem;
+
+  .section-h {
+    text-transform: uppercase;
+
+    &.h1 {
+      font-size: 1.5rem;
+    }
+
+    &.h2 {
+      font-size: 1rem;
+    }
+  }
+}
+
+.wrapper {
+  --min-width: 700px;
+  --min-inline-margin: 1rem;
+
+  width: min(var(--min-width), 100% - (var(--min-inline-margin) * 2));
+  margin-inline: auto;
+}
+
+.example {
+  border: 1px solid gray;
+  padding: 1rem;
+
+  >* {
+    text-align: center;
+    border: 1px solid black;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+  }
+}
